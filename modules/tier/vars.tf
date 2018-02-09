@@ -2,6 +2,10 @@ variable "vpc_id" {
   description = "The VPC ID to launch the tiered architecture into"
 }
 
+variable "map_public_ip_on_launch" {
+  default = false
+}
+
 variable "cidr_block" {
   description = "The CIDR block to launch the tiered architecture into"
 }
@@ -22,6 +26,6 @@ variable "ami_id" {
   description = "ami id for instance"
 }
 
-variable "ingess" {
+variable "ingress" {
   type = "list"
 }
