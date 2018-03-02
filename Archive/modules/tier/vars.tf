@@ -7,7 +7,7 @@ variable "map_public_ip_on_launch" {
 }
 
 variable "cidr_block" {
-  description = "The CIDR block to launch the tiered architecture into"
+  description = "The CIDR block of the tier subnet"
 }
 
 variable "name" {
@@ -19,17 +19,13 @@ variable "user_data" {
 }
 
 variable "route_table_id" {
-  description = "table data to supply to the instance"
+  description = "id of route table to associate with the subnet"
 }
 
 variable "ami_id" {
-  description = "ami id for instance"
+  description = "the id of the ami to spin up in the subnet"
 }
 
 variable "ingress" {
   type = "list"
-}
-
-variable "machine_count" {
-  description = "The number of machine to create"
 }
